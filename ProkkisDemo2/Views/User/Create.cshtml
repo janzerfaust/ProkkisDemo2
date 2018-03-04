@@ -1,0 +1,12 @@
+﻿@model ProkkisDemo2.Core.Models.User
+
+<h2>Create a user</h2>
+<form asp-action="Create" method="post">
+    <label asp-for="UserName">
+        <input type="text" asp-for="UserName" />
+    </label>    
+    <label asp-for="Email">
+        <input type="email" asp-for="Email" />
+    </label>
+    <input type="submit" />
+</form>

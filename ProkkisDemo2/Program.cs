@@ -6,14 +6,9 @@ using System.IO;
 namespace ProkkisDemo2
 {
     public class Program
-    {
-        static IConfiguration configuration;
+    {        
         public static void Main(string[] args)
         {
-            /*var configBuilder = new ConfigurationBuilder();
-            configuration = configBuilder.SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json")
-                .Build();*/
             BuildWebHost(args).Run();
         }
 

@@ -2,7 +2,7 @@
 
 namespace ProkkisDemo2.Core
 {
-    interface IUnitOfWork
+    public interface IUnitOfWork
     {
         Task SaveAsync();
     }

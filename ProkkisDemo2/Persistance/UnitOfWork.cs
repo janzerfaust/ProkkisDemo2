@@ -5,16 +5,16 @@ namespace ProkkisDemo2.Persistance
 {
     public class UnitOfWork : IUnitOfWork
     {
-        //private readonly dbcontext
+        private readonly ProkkisDbContext context;
 
-        public UnitOfWork()
+        public UnitOfWork(ProkkisDbContext context)
         {
-            // context = context
+            this.context = context;
         }
 
         public async Task SaveAsync()
-        {            
-            await Task.Run(() => { });
+        {
+            await context.SaveChangesAsync();
         }
     }
 }

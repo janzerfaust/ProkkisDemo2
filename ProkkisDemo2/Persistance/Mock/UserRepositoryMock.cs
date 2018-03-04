@@ -7,6 +7,11 @@ namespace ProkkisDemo2.Persistance.Mock
 {
     public class UserRepositoryMock : IUserRepository
     {
+        public Task<bool> CreateUser(User user)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public Task<User> GetUserAsync(int id)
         {
             return Task.Run(() =>

@@ -6,5 +6,6 @@ namespace ProkkisDemo2.Core
     public interface IUserRepository
     {
         Task<User> GetUserAsync(int id);
+        Task<bool> CreateUser(User user);
     }
 }
