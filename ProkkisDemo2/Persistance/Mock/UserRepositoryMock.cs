@@ -7,7 +7,7 @@ namespace ProkkisDemo2.Persistance.Mock
 {
     public class UserRepositoryMock : IUserRepository
     {
-        public Task<User> GetUser(int id)
+        public Task<User> GetUserAsync(int id)
         {
             return Task.Run(() =>
             {

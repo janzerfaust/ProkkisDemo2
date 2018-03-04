@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using ProkkisDemo2.Core;
 using ProkkisDemo2.Core.Models;
 
@@ -6,11 +7,16 @@ namespace ProkkisDemo2.Persistance
 {
     public class UserRepository : IUserRepository
     {
-        // dbcontext
+        ProkkisDbContext context;
 
-        public Task<User> GetUser(int id)
+        public UserRepository(ProkkisDbContext context)
         {
-            throw new System.NotImplementedException();
+            this.context = context;
+        }
+
+        public async Task<User> GetUserAsync(int id)
+        {
+            return await context.Users.SingleOrDefaultAsync(u => u.Id == id);
         }
     }
 }

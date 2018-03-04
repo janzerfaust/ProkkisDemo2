@@ -5,6 +5,6 @@ namespace ProkkisDemo2.Core
 {
     public interface IUserRepository
     {
-        Task<User> GetUser(int id);
+        Task<User> GetUserAsync(int id);
     }
 }

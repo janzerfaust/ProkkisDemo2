@@ -16,7 +16,11 @@ namespace ProkkisDemo2.Controllers
         [HttpGet]
         public async Task<IActionResult> Index(int id)
         {
-            var activeUser = await userRepository.GetUser(id);
+            var activeUser = await userRepository.GetUserAsync(id);
+            if(activeUser == null)
+            {
+                return NotFound();
+            }
             return View(activeUser);
         }
     }
